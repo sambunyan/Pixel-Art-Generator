@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Art Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="title">
+    <img id="titleImg" src="images/pixelLogo.png">
+    <p>Simply upload your photo, and let the magic happen!</p>
+</div>
+<div id="input_wrapper">
+<div id="file_div">
+    <label for="upload" id="uploadLabel" title="Only PNG and JPEG images are supported">
+        Upload Image:
+      </label>  
+    <input type="file" id="upload" accept="image/png, image/jpeg">
+    <p id="fileName">No file selected</p>
+</div>
+
+<div id="pixel_bar">
+    <label for="pixelSlider">Pixelated: <span id="pixelValue">100%</span></label>
+    <input type="range" id="pixelSlider" min="4" max="140" value="32">
+  </div>
+  
+<div id="size_bar">
+    <label for="scaleSlider">Scale: <span id="scaleValue">100%</span></label>
+    <input type="range" id="scaleSlider" min="10" max="200" value="100">
+  </div>
+  
+</div>
+    <canvas id="canvas"></canvas>
+    
+    <script src="script.js"></script>
+</body>
+</html>
