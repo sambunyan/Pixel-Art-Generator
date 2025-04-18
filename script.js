@@ -65,5 +65,12 @@ function drawImage() {
 
     ctx.imageSmoothingEnabled = false;
     ctx.drawImage(tempCanvas, 0, 0, newWidth, newHeight);
-}
+};
+
+document.getElementById("saveBtn").addEventListener("click", function () {
+  const link = document.createElement("a");
+  link.download = "pixel-art.png"; // default file name
+  link.href = canvas.toDataURL("image/png"); // convert canvas to data URL
+  link.click(); // trigger the download
+});
 
